@@ -12,11 +12,21 @@ public class RegisterPage {
         this.driver = driver;
     }
 
-    By firstName = By.id("input-firstname");
-    By lastName = By.id("input-lastname");
-    By email = By.id("input-email");
-    By telephone = By.id("input-telephone");
-    By password = By.id("input-password");
+    By firstName =
+            By.id("input-firstname");
+
+    By lastName =
+            By.id("input-lastname");
+
+    By email =
+            By.id("input-email");
+
+    By telephone =
+            By.id("input-telephone");
+
+    By password =
+            By.id("input-password");
+
     By confirmPassword =
             By.id("input-confirm");
 
@@ -55,5 +65,39 @@ public class RegisterPage {
 
         driver.findElement(continueBtn)
                 .click();
+    }
+
+    public void clickContinueButton() {
+
+        driver.findElement(continueBtn)
+                .click();
+    }
+
+    public String getFirstNameWarning() {
+
+        return driver.findElement(
+                By.xpath("//input[@id='input-firstname']/following-sibling::div")
+        ).getText();
+    }
+
+    public String getLastNameWarning() {
+
+        return driver.findElement(
+                By.xpath("//input[@id='input-lastname']/following-sibling::div")
+        ).getText();
+    }
+
+    public String getEmailWarning() {
+
+        return driver.findElement(
+                By.xpath("//input[@id='input-email']/following-sibling::div")
+        ).getText();
+    }
+
+    public String getDuplicateEmailWarning() {
+
+        return driver.findElement(
+                By.cssSelector(".alert-danger")
+        ).getText();
     }
 }

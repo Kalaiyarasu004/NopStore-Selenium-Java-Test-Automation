@@ -7,7 +7,7 @@ import pages.WishlistPage
 
 class WishlistTest : BaseTest() {
     @Test
-    @kotlin.Throws(InterruptedException::class)
+    @Throws(InterruptedException::class)
     fun addProductToWishlist() {
         val homePage =
             HomePage(driver)

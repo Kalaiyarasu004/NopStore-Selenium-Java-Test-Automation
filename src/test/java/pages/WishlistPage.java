@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class WishlistPage {
 
@@ -24,9 +26,25 @@ public class WishlistPage {
                 .click();
     }
 
-    public void addToWishlist() {
+    public void addToWishlist()
+            throws InterruptedException {
 
-        driver.findElement(wishlistButton)
-                .click();
+        WebElement wishlist =
+                driver.findElement(wishlistButton);
+
+        JavascriptExecutor js =
+                (JavascriptExecutor) driver;
+
+        js.executeScript(
+                "arguments[0].scrollIntoView(true);",
+                wishlist
+        );
+
+        Thread.sleep(2000);
+
+        js.executeScript(
+                "arguments[0].click();",
+                wishlist
+        );
     }
 }

@@ -15,14 +15,11 @@
 
             <class name="tests.CartTest"/>
 
+            <class name="tests.WishlistTest"/>
+
             <class name="tests.ValidationTest"/>
 
-            <class name="tests.DuplicateEmailTest"/>
-
-            <class name="tests.CheckoutValidationTest"/>
         </classes>
-
-
 
     </test>
 

@@ -19,8 +19,8 @@ public class LoginTest extends BaseTest {
                 new LoginPage(driver);
 
         loginPage.loginUser(
-                "john123@gmail.com",
-                "Test@123"
+                "kalaiyarsu436@gmail.com",
+                "Kalai@1445"
         );
 
     }

@@ -33,8 +33,8 @@ public class RegisterTest extends BaseTest {
         registerPage.registerUser(
                 "John",
                 "Doe",
-                "john123@gmail.com",
-                "Test@123"
+                "kalaiyrsu436@gmail.com",
+                "Kalai@1445"
         );
     }
 }
